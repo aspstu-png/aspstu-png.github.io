@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Анастасия Путина — Product Designer. B2B SaaS, IoT-диспетчеризация, собственные продукты. Кейсы DomoSense и ежедневник-система.">
+<meta property="og:title" content="Анастасия Путина — Product Designer">
+<meta property="og:description" content="Кейсы: IoT-диспетчерская DomoSense с приложением бригады и ежедневник-система.">
+<meta property="og:image" content="https://aspstu-png.github.io/img/ds_hero.jpg">
+<meta property="og:url" content="https://aspstu-png.github.io/">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232338C9'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='15' fill='white' text-anchor='middle'%3EАП%3C/text%3E%3C/svg%3E">
+<title>Анастасия Путина — Product Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a design specification sheet — narrow left rail of mono labels, wide right column of content; cases read like annotated drawings */
+:root{
+  --paper:#F4F5F3; --sheet:#FFFFFF; --ink:#16181D; --muted:#5B606B; --rule:#DADDE0;
+  --blue:#2338C9; --blue-soft:#E8EBFA; --gold:#B8913F;
+  --f-display:"Onest",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-body:"Onest",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  --s1:clamp(2.4rem,5.2vw,4.4rem); --s2:clamp(1.6rem,3vw,2.3rem); --s3:1.25rem; --s4:1.02rem; --s5:.78rem;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#111318; --sheet:#181B21; --ink:#ECEDEF; --muted:#9EA3AD; --rule:#2B2F37;
+  --blue:#8E9CFF; --blue-soft:#1F2547; --gold:#D3B06A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#111318; --sheet:#181B21; --ink:#ECEDEF; --muted:#9EA3AD; --rule:#2B2F37;
+  --blue:#8E9CFF; --blue-soft:#1F2547; --gold:#D3B06A; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:var(--s4);line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;letter-spacing:-.02em}
+h1{font-size:var(--s1);font-weight:800;line-height:1.02}
+h2{font-size:var(--s2);font-weight:800;line-height:1.1}
+h3{font-size:var(--s3);font-weight:600;line-height:1.3}
+p{margin:0;max-width:66ch}
+.mono{font-family:var(--f-mono);font-size:var(--s5);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.muted{color:var(--muted)}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+
+/* top */
+header.top{padding-block:28px 0}
+.top-row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline;border-bottom:1px solid var(--rule);padding-block:0 14px}
+.top-row nav{display:flex;gap:18px;flex-wrap:wrap}
+.top-row nav a{color:var(--ink);text-decoration:none;font-family:var(--f-mono);font-size:var(--s5);letter-spacing:.06em;text-transform:uppercase}
+.top-row nav a:hover{color:var(--blue)}
+
+.hero{display:grid;grid-template-columns:200px 1fr;gap:32px;padding-block:56px 48px}
+.hero .lead{display:grid;gap:22px;min-width:0}
+.hero h1 em{font-style:normal;color:var(--blue)}
+.hero p.big{font-size:1.18rem;color:var(--muted)}
+.contacts{display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--f-mono);font-size:.86rem}
+.contacts span{user-select:all}
+.copy{font:inherit;font-family:var(--f-mono);font-size:.74rem;border:1px solid var(--rule);background:var(--sheet);color:var(--ink);border-radius:4px;padding:3px 8px;cursor:pointer}
+.copy:hover{border-color:var(--blue);color:var(--blue)}
+
+.spec{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--rule)}
+.spec div{padding:18px 16px 18px 0;display:grid;gap:4px}
+.spec div+div{padding-left:16px;border-left:1px solid var(--rule)}
+.spec b{font-family:var(--f-display);font-size:2rem;font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+
+section{padding-block:72px 0}
+.sec{display:grid;grid-template-columns:200px 1fr;gap:32px}
+.sec > .label{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;display:grid;gap:6px}
+.sec > .label .n{font-family:var(--f-display);font-weight:800;font-size:2.6rem;line-height:1;color:var(--blue)}
+.body{display:grid;gap:28px;min-width:0}
+.meta{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.04em;border:1px solid var(--rule);border-radius:3px;padding:2px 7px;color:var(--muted);background:var(--sheet)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.two > *{min-width:0}
+.block{display:grid;gap:10px}
+.block ul{margin:0;padding-left:1.1em;display:grid;gap:6px}
+.block li::marker{color:var(--blue)}
+
+figure{margin:0;display:grid;gap:8px}
+figure img{display:block;width:100%;height:auto;border:1px solid var(--rule);border-radius:6px;background:var(--sheet)}
+figcaption{font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+
+/* flow */
+.flow{display:flex;flex-wrap:wrap;gap:0;align-items:stretch;border:1px solid var(--rule);border-radius:6px;background:var(--sheet);overflow:hidden}
+.flow div{flex:1 1 150px;padding:14px 16px;display:grid;gap:4px;position:relative}
+.flow div+div{border-left:1px dashed var(--rule)}
+.flow div+div::before{content:"→";position:absolute;left:-.55em;top:12px;background:var(--sheet);color:var(--blue);font-weight:600;padding:0 2px}
+.flow b{font-family:var(--f-display);font-size:1rem}
+.flow small{color:var(--muted);font-size:.84rem;line-height:1.4}
+
+/* decisions table */
+.tbl{overflow-x:auto;border:1px solid var(--rule);border-radius:6px;background:var(--sheet)}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:.93rem}
+th,td{text-align:left;vertical-align:top;padding:11px 14px;border-bottom:1px solid var(--rule)}
+th{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+tr:last-child td{border-bottom:0}
+td:last-child{color:var(--blue);font-family:var(--f-mono);font-size:.84rem}
+
+code{font-family:var(--f-mono);font-size:.86em;background:var(--blue-soft);padding:1px 5px;border-radius:4px}
+.note{border-left:2px solid var(--gold);padding:4px 0 4px 14px;color:var(--muted);font-size:.92rem}
+
+/* planner */
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;align-items:start}
+.gallery figure:first-child{grid-row:span 2}
+.gallery figure:first-child img{aspect-ratio:874/1240}
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--rule)}
+.nums div{padding:14px 14px 0 0;display:grid;gap:2px}
+.nums b{font-family:var(--f-display);font-size:1.6rem;font-weight:800;font-variant-numeric:tabular-nums}
+.ladder{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;align-items:end}
+.ladder div{background:var(--blue-soft);border-radius:4px;padding:12px;display:grid;gap:2px}
+.ladder div:nth-child(1){min-height:70px}.ladder div:nth-child(2){min-height:100px}.ladder div:nth-child(3){min-height:130px}.ladder div:nth-child(4){min-height:160px;background:var(--blue);color:var(--sheet)}
+.ladder div:nth-child(4) .mono{color:var(--sheet);opacity:.8}
+.ladder b{font-family:var(--f-display);font-size:1.05rem}
+
+/* process */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--rule)}
+.steps li{padding:16px 16px 16px 0;display:grid;gap:4px;border-bottom:1px solid var(--rule)}
+.steps li span{font-family:var(--f-mono);font-size:.74rem;color:var(--blue)}
+
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:20px 28px}
+.cv{display:grid;gap:0;border-top:1px solid var(--rule)}
+.cv div{display:grid;grid-template-columns:170px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule)}
+.cv div > *{min-width:0}
+
+footer{padding-block:80px 48px}
+footer .box{background:var(--ink);color:var(--paper);border-radius:8px;padding:32px;display:grid;gap:16px}
+footer .box h2{color:var(--paper)}
+footer .box .contacts span{color:var(--paper)}
+.f-label{font-family:var(--f-body);font-size:1.05rem;font-weight:600;letter-spacing:0;color:var(--paper)}
+.f-contacts{font-family:var(--f-body);font-size:1.3rem;font-weight:500;gap:8px 32px}
+footer .box .copy{background:transparent;color:var(--paper);border-color:color-mix(in srgb,var(--paper) 35%,transparent)}
+
+@media (max-width:860px){
+  .hero,.sec{grid-template-columns:1fr;gap:16px}
+  .sec > .label{position:static;display:flex;gap:12px;align-items:baseline}
+  .sec > .label .n{font-size:2rem}
+  .two,.skills{grid-template-columns:1fr}
+  .spec,.nums{grid-template-columns:repeat(2,1fr)}
+  .spec div:nth-child(3){padding-left:0;border-left:0}
+  .steps{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr}
+  .gallery figure:first-child{grid-row:auto}
+  .ladder{grid-template-columns:repeat(2,1fr)}
+  .cv div{grid-template-columns:1fr;gap:2px}
+  .hero .side{display:none}
+}
+@media print{
+  :root{--paper:#fff;--sheet:#fff;--ink:#16181D;--muted:#555A63;--rule:#D6D9DD;--blue:#2338C9;--blue-soft:#E8EBFA;--f-mono:"Onest",system-ui,sans-serif;color-scheme:light}
+  .top-row nav,.copy{display:none}
+  section{padding-block:28px 0;break-inside:auto}
+  .sec > .label{position:static}
+  figure,.flow,.tbl,.ladder,.nums,.steps li,.cv div{break-inside:avoid}
+  .mono,.tag,figcaption,th,.steps li span,td:last-child{letter-spacing:.02em}
+  footer .box{background:#fff;color:#16181D;border:2px solid #16181D}
+  .f-label{color:#16181D}
+  footer .box .contacts span{color:#16181D}
+  .pb{break-before:page}
+  .two,.block{break-inside:avoid}
+  h2,h3{break-after:avoid}
+  footer{padding-block:28px 0}
+  .hero{padding-block:28px 24px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+
+<style>body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+
+<div class="wrap">
+<header class="top">
+  <div class="top-row">
+    <span class="mono">Портфолио · 2026</span>
+    <nav aria-label="Разделы">
+      <a href="#domosense">DomoSense</a>
+      <a href="#planner">Ежедневник</a>
+      <a href="#process">Подход</a>
+      <a href="#cv">Опыт</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="side mono">Product Designer<br>B2B SaaS · IoT</div>
+  <div class="lead">
+    <span class="mono">Анастасия Путина · Product Designer</span>
+    <h1>Проектирую системы, где много сущностей и&nbsp;<em>мало права на&nbsp;ошибку</em></h1>
+    <p class="big">IoT-диспетчеризация, панели оператора, конструкторы правил, собственные продукты от исследования рынка до макета. До дизайна — 10 лет аналитики и построения процессов в университете, поэтому решения я принимаю по данным.</p>
+    <div class="contacts">
+      <span id="phone">+7 952 644-39-24 · Telegram</span>
+      <span id="mail">a.s.pstu@gmail.com</span>
+      <button class="copy" type="button" id="copyMail" data-copy="a.s.pstu@gmail.com">Скопировать e-mail</button>
+      <span class="muted">Пермь · удалённо · готова к переезду</span>
+    </div>
+  </div>
+</div>
+
+<div class="spec" role="list">
+  <div role="listitem"><b>~130</b><span class="mono">экранов в IoT-модуле</span></div>
+  <div role="listitem"><b>3</b><span class="mono">итерации одного продукта</span></div>
+  <div role="listitem"><b>27</b><span class="mono">конкурентов в анализе</span></div>
+  <div role="listitem"><b>10 лет</b><span class="mono">аналитики до дизайна</span></div>
+</div>
+
+<!-- CASE 1 -->
+<section id="domosense">
+  <div class="sec">
+    <div class="label"><span class="n">01</span><span class="mono">Кейс · B2B SaaS</span></div>
+    <div class="body">
+      <div class="block">
+        <h2>DomoSense — диспетчерская для управляющих компаний</h2>
+        <div class="meta"><span class="tag">IoT</span><span class="tag">Web · PWA</span><span class="tag">Product Designer + PM</span><span class="tag">2024–2026</span></div>
+      </div>
+      <p>Диспетчер УК следит за лифтами, вентиляцией, водой и пожарной сигнализацией в разных программах, а все сигналы приходят одной лентой. Застрявший лифт теряется среди сотни уведомлений. Я спроектировала с нуля модуль диспетчеризации для 9 инженерных подсистем: от доменной модели и user flow до экранов и спецификаций для разработки.</p>
+      <p class="note">Проект под NDA. Название, адреса и данные заменены вымышленными, логика и структура интерфейса сохранены. Ниже отдельно помечено, что было в рабочем проекте, а что я доработала в 2026 году.</p>
+
+      <figure>
+        <img src="img/ds_hero.jpg" alt="Первый экран лендинга DomoSense с доской диспетчера: счётчики тревог, предупреждений и задач по подсистемам">
+        <figcaption>Лендинг продукта и доска диспетчера: подсистема = карточка с тремя счётчиками</figcaption>
+      </figure>
+
+      <div class="block">
+        <h3>Сценарий целиком: от сигнала датчика до закрытой задачи</h3>
+        <div class="flow" role="list">
+          <div role="listitem"><span class="mono">Устройство</span><b>Сигнал</b><small>телеметрия из шаблона модели</small></div>
+          <div role="listitem"><span class="mono">Правило</span><b>Событие</b><small>5 типов правил, повторы склеиваются в инцидент</small></div>
+          <div role="listitem"><span class="mono">Диспетчер</span><b>Реакция</b><small>удалённая команда из карточки события</small></div>
+          <div role="listitem"><span class="mono">Бригада</span><b>Задача</b><small>исполнитель, срок, проверка при завершении</small></div>
+          <div role="listitem"><span class="mono">УК</span><b>Журнал</b><small>кто, когда и что сделал</small></div>
+        </div>
+      </div>
+
+      <div class="block">
+        <h3>Ключевые решения и метрики, под которые они заложены</h3>
+        <div class="tbl"><table>
+          <thead><tr><th>Решение</th><th>Зачем бизнесу</th><th>Метрика</th></tr></thead>
+          <tbody>
+            <tr><td>Модель «шаблон → экземпляр»: метрики, команды и правила описываются один раз на модель устройства</td><td>Новый лифт той же модели подключается за минуты, интерфейс не растёт вместе с каталогом</td><td>time-to-value</td></tr>
+            <tr><td>Конструктор правил: пороговое, диапазонное, булево, скорость изменения, отсутствие данных + интервал агрегации</td><td>Меньше шума в ленте, диспетчер видит инцидент, а не 40 одинаковых уведомлений</td><td>доля дублей</td></tr>
+            <tr><td>Дашборд: тревоги отделены от предупреждений, клик по счётчику открывает отфильтрованную ленту</td><td>Срочное видно за секунду, путь до карточки — 1 клик</td><td>MTTA</td></tr>
+            <tr><td>Команды «Открыть двери», «Перезагрузить» прямо в карточке события</td><td>Типовые проблемы решаются без выезда бригады</td><td>% удалённых решений</td></tr>
+            <tr><td>Задача из события в один шаг + журнал действий</td><td>Контроль подрядчиков и аргумент на собрании жильцов</td><td>% задач в срок</td></tr>
+          </tbody>
+        </table></div>
+        <p class="note">Это метрики, под которые заложены решения. Замеров «до/после» в кейсе нет.</p>
+      </div>
+
+      <figure>
+        <img src="img/ds_how.jpg" alt="Дашборд подсистем, карточка события лифта с кнопками команд и журнал действий">
+        <figcaption>Дашборд → карточка события → журнал. Состояния 999+, пустые экраны и отключённые устройства проработаны отдельно</figcaption>
+      </figure>
+
+      <div class="two">
+        <div class="block">
+          <h3>Что я сделала</h3>
+          <ul>
+            <li>Доменная модель и информационная архитектура: объекты (ЖК → дом → подъезд), устройства, шаблоны, правила, события, задачи</li>
+            <li>User flow подключения устройства в 6 этапов, блок-схемы обработки сигнала</li>
+            <li>~130 экранов в 3 итерациях на едином UI-ките, PWA; в версии 2 — 49 экранов диспетчерской и 14 экранов приложения бригады на собственной дизайн-системе</li>
+            <li>Спецификации разделов для разработки рядом с макетами</li>
+            <li>Лендинг продукта с моделью «пилот 14 дней, оплата за дом»</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h3>Чему научил проект</h3>
+          <ul>
+            <li>В B2B интерфейс масштабируется через модель данных, а не через количество экранов</li>
+            <li>Порядок заполнения сложной сущности нужно проектировать: «сначала сохраните шаблон, потом добавьте действия»</li>
+            <li>Метрики стоит закладывать до первой итерации, чтобы потом было с чем сравнить</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="block v2">
+        <span class="mono">Версия 2 · 2026</span>
+        <h3>Дизайн-система, AI-разбор тревоги и приложение бригады</h3>
+        <p>Пересобрала продукт на собственной дизайн-системе: токены в Figma Variables со светлой и тёмной темой, компоненты со всеми состояниями и код, который генерируется из тех же переменных. Перерисовала на ней модуль диспетчерской — 49 экранов, дашборд адаптирован под 1440 / 768 / 390. Затем провела ревью как Design Lead и исправила то, что нашла: цифры, которые не сходились между экранами, отсутствие шага «Принять в работу», небезопасный сценарий застрявшего лифта и размытые роли. И спроектировала вторую половину продукта — мобильное приложение бригады.</p>
+      </div>
+      <div class="nums" role="list">
+        <div role="listitem"><b>28</b><span class="mono">семантических токенов · Light / Dark</span></div>
+        <div role="listitem"><b>20</b><span class="mono">компонентов в Figma · 34 иконки</span></div>
+        <div role="listitem"><b>63</b><span class="mono">экрана: 49 диспетчерская + 14 бригада</span></div>
+        <div role="listitem"><b>1</b><span class="mono">источник правды · Figma → CSS → GitHub</span></div>
+      </div>
+      <figure>
+        <img src="img/ds_dash.jpg" alt="Дашборд диспетчера на дизайн-системе: лента событий со статусами и девять карточек подсистем">
+        <figcaption>Дашборд на компонентах: сначала то, что требует реакции, затем состояние систем. Цифры сходятся с лентой событий: 3 тревоги, 2 не приняты. Внизу меню — кто работает и с какой ролью</figcaption>
+      </figure>
+      <div class="two">
+        <figure><img src="img/ds_dark.jpg" alt="Тот же дашборд в тёмной теме"><figcaption>Тёмная тема — смена режима токенов, без новых макетов</figcaption></figure>
+        <figure><img src="img/ds_buttons.jpg" alt="Матрица кнопок: 4 стиля на 6 состояний"><figcaption>Button: 4 стиля × 6 состояний, включая Focus и Loading</figcaption></figure>
+      </div>
+      <figure>
+        <img src="img/ds_event.jpg" alt="Карточка события «Двери не открываются»: кнопка «Принять в работу», поле «Люди в кабине: неизвестно», команды с первой кнопкой «Связь с кабиной» и AI-разбор с шагами">
+        <figcaption>Карточка события после ревью: сначала «Принять в работу», первым шагом — связь с кабиной, команды по одной с подтверждением. AI показывает основание и уверенность, но не выполняет шаги пачкой</figcaption>
+      </figure>
+      <div class="two">
+        <div class="block">
+          <h3>Как устроена AI-фича</h3>
+          <ul>
+            <li><b>Основание вместо магии.</b> Каждая подсказка показывает, на скольких похожих случаях она построена.</li>
+            <li><b>Низкая уверенность — без совета.</b> Если данных мало, компонент отправляет к регламенту, а не угадывает.</li>
+            <li><b>Автозаполнение задачи.</b> AI заполняет название, описание, исполнителя и срок и обводит их фиолетовым, чтобы диспетчер проверил. Контекст события — только для чтения.</li>
+            <li><b>Обратная связь.</b> «Не подходит» собирает причину — это данные для улучшения модели.</li>
+          </ul>
+          <p class="note">Метрики пилота: принятые подсказки ≥ 60%, неверные шаги ≤ 5%, время до первого действия −30%, возврат к подсказкам через 7 дней ≥ 50%. Это целевые значения, не результат.</p>
+        </div>
+        <figure><img src="img/ds_task.jpg" alt="Форма новой задачи, четыре поля которой заполнены AI"><figcaption>Задача на выезд: поля от AI в фиолетовой рамке, срок считается от SLA</figcaption></figure>
+      </div>
+      <div class="block">
+        <h3>Весь модуль на одной системе: 49 экранов и прототип</h3>
+        <p>Исходные 54 макета первой версии свела к 49 экранам без дублей и добавила то, чего не хватало: ошибки, пустые состояния, подтверждения опасных действий и экран «после действия». Экраны связаны в кликабельный прототип: меню, вкладки, строки таблиц и основные кнопки ведут по сценарию.</p>
+        <div class="meta"><a class="tag" href="https://www.figma.com/proto/TgHwlPhPxqGkT3HYAqHu3c/DomoSense?node-id=15-4&p=f&scaling=min-zoom&content-scaling=fixed&page-id=14%3A164&starting-point-node-id=15%3A4">▶ Открыть прототип</a></div>
+      </div>
+      <figure>
+        <img src="img/ds_all.jpg" alt="Мозаика из десяти экранов: дашборд, справочник шаблонов, мастер шаблона, устройства, телеметрия, управление, служба событий, задачи, объекты, метрики">
+        <figcaption>9 разделов: дашборд, справочник и мастер шаблонов, устройства, служба событий, задачи, объекты, метрики, схемы процессов</figcaption>
+      </figure>
+      <figure>
+        <img src="img/ds_roles.jpg" alt="Таблица ролей и прав: диспетчер, бригада в приложении, инженер-наладчик и руководитель УК по девяти действиям">
+        <figcaption>Роли и права: кто что видит и что может нажать. Справочник шаблонов и отвязка устройств — у наладчика, не у диспетчера</figcaption>
+      </figure>
+      <div class="two">
+        <figure><img src="img/ds_taskcard.jpg" alt="Карточка задачи с этапами Назначена, Принята, На объекте, На проверке, Закрыта, чек-листом и таймером срока"><figcaption>Задача у диспетчера: этапы совпадают со статусами в приложении бригады</figcaption></figure>
+        <figure><img src="img/ds_unlink.jpg" alt="Модальное окно подтверждения отвязки лифта от объекта с предупреждением об активной тревоге"><figcaption>Опасное действие: окно называет последствия — активную тревогу и открытую задачу</figcaption></figure>
+      </div>
+      <div class="two">
+        <div class="block">
+          <h3>Решения в новых экранах</h3>
+          <ul>
+            <li><b>Одна карточка на инцидент.</b> Детали, телеметрия, команды и AI-разбор собраны вместе, журнал — соседней вкладкой.</li>
+            <li><b>Сначала человек, потом техника.</b> При застрявшем лифте первый шаг — связь с кабиной и поле «Люди в кабине». Команды — по одной, с подтверждением.</li>
+            <li><b>«Принять в работу» до «Отработано».</b> Лента сортируется по критичности, колонка «Ведёт» показывает, кто взял тревогу. Без этого MTTA не измерить.</li>
+            <li><b>Последствия до действия.</b> «Отвязать устройство» и смена кода метрики заранее показывают, что сломается: тревоги, задачи, правила на 14 лифтах.</li>
+            <li><b>Состояние после действия.</b> Тост с «Отменить», заблокированные команды у закрытого события, этапы задачи вместо одного статуса.</li>
+          </ul>
+        </div>
+        <figure><img src="img/ds_flow.jpg" alt="Схема: телеметрия, правило, событие, AI-разбор, затем либо команда и закрытие, либо задача, исполнитель и проверка"><figcaption>Схема процесса со ссылками на экраны: где решаем на месте, а где нужен выезд</figcaption></figure>
+      </div>
+      <div class="block v2">
+        <span class="mono">Приложение бригады · 2026</span>
+        <h3>Вторая половина диспетчерской: телефон в руках бригады</h3>
+        <p>Диспетчер ставит задачу, а дальше бригада раньше пропадала до звонка «вы где?». Приложение закрывает этот разрыв: задача приходит на телефон, бригада принимает её, едет, отмечается по геопозиции, проходит чек-лист и сдаёт отчёт с фото и подписью УК. Каждый шаг сразу меняет этап в карточке задачи у диспетчера.</p>
+      </div>
+      <figure>
+        <img src="img/crew_hero.jpg" alt="Пять экранов приложения бригады: список задач, срочный вызов «люди в кабине», работа на объекте с чек-листом и телеметрией, подтверждение пробного рейса и отчёт с фото">
+        <figcaption>Задачи → срочный вызов → на объекте → подтверждение команды → отчёт. Те же токены и компоненты, что у диспетчерской</figcaption>
+      </figure>
+      <figure>
+        <img src="img/crew_flow.jpg" alt="Цепочка статусов задачи от «Назначена» до «Закрыта» с веткой «На доработке» и шесть ключевых решений приложения">
+        <figcaption>Статусы задачи общие для обоих интерфейсов, плюс шесть решений, которые делают приложение безопасным</figcaption>
+      </figure>
+      <div class="two">
+        <div class="block">
+          <h3>Что внутри</h3>
+          <ul>
+            <li>14 экранов: вход по коду, начало смены, задачи, срочный вызов, карточка задачи, в пути, на объекте, без связи, подтверждение команды, отчёт, отправлено, доработка, чат, итог смены</li>
+            <li>Работа без сети: чек-лист и фото копятся на телефоне, команды лифту блокируются</li>
+            <li>Команда лифту — только на объекте и с галочкой «кабина пустая, двери шахты закрыты»</li>
+            <li>Возврат на доработку с причиной вместо звонка, срок задачи не сдвигается</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h3>Метрики, которые это даёт</h3>
+          <ul>
+            <li>Время от назначения до «Принята»</li>
+            <li>Доля задач с отметкой «на месте» по геопозиции</li>
+            <li>Доля отчётов, вернувшихся на доработку</li>
+            <li>Время освобождения людей при срочном вызове</li>
+          </ul>
+          <p class="note">Целевые значения команда задаёт по данным пилота. Это концепт приложения, тестов с бригадами ещё не было.</p>
+          <div class="meta"><a class="tag" href="https://www.figma.com/proto/TgHwlPhPxqGkT3HYAqHu3c/DomoSense?node-id=44-3&p=f&scaling=scale-down&content-scaling=fixed&page-id=44%3A2&starting-point-node-id=44%3A3">▶ Прототип приложения бригады</a></div>
+        </div>
+      </div>
+      <div class="block">
+        <h3>Код и проверка вёрстки</h3>
+        <p>Токены выгружаются из Figma в JSON, скрипт без зависимостей собирает из них CSS. Компоненты повторяют варианты Figma, состояния задаются нативными атрибутами: <code>disabled</code>, <code>aria-busy</code>, <code>aria-invalid</code>. Код лежит в публичном репозитории на GitHub: токены и 5 базовых компонентов — кнопка, поле, статус, карточка дашборда и AI-разбор. Остальные 15 компонентов пока описаны спецификациями в Figma. AI-разбор добавлен отдельным pull request с описанием: зачем, правила поведения, метрики пилота и как проверить. В нём же — исправление контраста Danger-кнопки в тёмной теме, которое я нашла при проверке. PR влит в main.</p>
+        <div class="meta"><a class="tag" href="https://www.figma.com/proto/TgHwlPhPxqGkT3HYAqHu3c/DomoSense?node-id=15-4&p=f&scaling=min-zoom&content-scaling=fixed&page-id=14%3A164&starting-point-node-id=15%3A4">▶ Смотреть прототип</a><a class="tag" href="https://www.figma.com/design/TgHwlPhPxqGkT3HYAqHu3c/?node-id=14-164">Все экраны в Figma</a><a class="tag" href="https://github.com/aspstu-png/domosense-design-system">Репозиторий GitHub</a><a class="tag" href="https://github.com/aspstu-png/domosense-design-system/pull/1">Pull request · AI-разбор</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE 2 -->
+<section id="planner" class="pb">
+  <div class="sec">
+    <div class="label"><span class="n">02</span><span class="mono">Кейс · собственный продукт</span></div>
+    <div class="body">
+      <div class="block">
+        <h2>«Не спусти жизнь в унитаз» — ежедневник-система с ботом</h2>
+        <div class="meta"><span class="tag">B2C · B2B-тиражи</span><span class="tag">Product discovery</span><span class="tag">Print + Digital</span><span class="tag">AI-assisted</span><span class="tag">2026</span></div>
+      </div>
+      <p>Собственный продукт с полным циклом: проверила спрос, разобрала конкурентов, собрала линейку и цены, спроектировала сам ежедневник. Гипотеза из отзывов на популярные планеры: люди бросают трекеры, потому что их слишком много и заполнять их долго. Поэтому в моём ежедневнике трекеров мало, но они обязательные, а цель разбита на шаги размером с один день.</p>
+
+      <div class="nums" role="list">
+        <div role="listitem"><b>14</b><span class="mono">источников в исследовании</span></div>
+        <div role="listitem"><b>7,0/10</b><span class="mono">оценка ниши</span></div>
+        <div role="listitem"><b>27</b><span class="mono">конкурентов по 7 блокам</span></div>
+        <div role="listitem"><b>1 из 27</b><span class="mono">с цифровым сопровождением</span></div>
+      </div>
+
+      <div class="block">
+        <div class="block">
+          <h3>Находки, которые изменили продукт</h3>
+          <ul>
+            <li><b>Недатированный формат.</b> Пик продаж ежедневников — декабрь. Методика «точка А → точка Б» не привязана к январю, поэтому сезон стал круглогодичным.</li>
+            <li><b>Карта пустоты.</b> Ни один из 27 конкурентов не закрывает больше 3 из 7 блоков: цели, трекер, режим, питание, семья, деньги, сопровождение.</li>
+            <li><b>Чужая ошибка.</b> Ежедневник «малых шагов» с циклом 21 день получил рейтинг 3,6 и ушёл с рынка. Лестница «день → неделя → месяц → год» закрывает эту дыру.</li>
+          </ul>
+        </div>
+      </div>
+
+        <div class="block">
+        <h3>Лестница продуктов</h3>
+        <div class="ladder">
+          <div><span class="mono">вход</span><b>PDF на 7 дней</b></div>
+          <div><span class="mono">тест</span><b>Цифровая версия</b></div>
+          <div><span class="mono">основа</span><b>Печатный + бот</b></div>
+          <div><span class="mono">максимум</span><b>Сопровождение, тиражи</b></div>
+        </div>
+        <p class="muted" style="font-size:.92rem">10 продуктов от бесплатного до корпоративных тиражей. Основной ежедневник — 1 890 ₽: выше PLAN ME, ниже «Просто космоса 2.0». Калькулятор стоимости для частных клиентов и компаний.</p>
+      </div>
+
+      <div class="gallery">
+        <figure><img src="img/pl0.jpg" alt="Обложка ежедневника: графитовый фон, золотое название и линия от А к Б"><figcaption>Обложка · графит и золото — премиум-подарок</figcaption></figure>
+        <figure><img src="img/pl1.jpg" alt="Разворот «Точка Б»: цели и шкала точки А по шести сферам"><figcaption>Точка Б · одна-три цели и честная точка А</figcaption></figure>
+        <figure><img src="img/pl2.jpg" alt="Разворот «Шаги к цели» с таблицей шагов"><figcaption>Лестница шагов · каждый шаг на день или неделю</figcaption></figure>
+        <figure><img src="img/pl3.jpg" alt="Разворот «Месяц» с календарём и блоками дат, дней рождения и денег"><figcaption>Месяц · даты, подарки, деньги месяца</figcaption></figure>
+        <figure><img src="img/pl5.jpg" alt="Разворот «День»: расписание, один шаг к цели, режим питания, вечерняя сверка"><figcaption>День · один шаг, режим питания, правило двух дней</figcaption></figure>
+      </div>
+
+      <div class="block">
+        <h3>Поведенческие триггеры прямо в бумаге</h3>
+        <p>Правило двух дней: пропустить один день можно, два подряд нельзя. Страница «Если всё валится из рук», на которую ведут ссылки с каждой недели. Контрольная точка 21-го дня. QR-код ведёт в Telegram-бот с тремя модулями: «Мама» (питание и быт), «Фокус» (один шаг на сегодня), «Вперёд» (возврат после пропуска). Навигационные табы на полях — как в интерфейсе, чтобы раздел находился за секунду.</p>
+        <p class="note">План запуска с проверкой спроса на каждом шаге: цифровой PDF (ноябрь–декабрь 2026) → предзаказ 50–100 штук → маркетплейсы весной 2027.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="pb">
+  <div class="sec">
+    <div class="label"><span class="n">03</span><span class="mono">Как я работаю</span></div>
+    <div class="body">
+      <h2>Сначала модель и метрика, потом экран</h2>
+      <ol class="steps">
+        <li><span>1 · Discovery</span><b>Рынок, конкуренты, боли</b><span class="muted">исследование, JTBD, карта пустоты</span></li>
+        <li><span>2 · Модель</span><b>Сущности и связи</b><span class="muted">что с чем связано и кто чем владеет</span></li>
+        <li><span>3 · Flow</span><b>Сценарии целиком</b><span class="muted">CJM, блок-схемы, ветки ошибок</span></li>
+        <li><span>4 · UI</span><b>Экраны на дизайн-системе</b><span class="muted">состояния, edge cases, адаптив, прототип</span></li>
+        <li><span>5 · Передача</span><b>Спецификация и код</b><span class="muted">токены в коде, PR с описанием и критериями проверки</span></li>
+        <li><span>6 · Проверка</span><b>Тест и итерация</b><span class="muted">юзабилити, метрики, следующая версия</span></li>
+      </ol>
+      <div class="skills">
+        <div class="block"><span class="mono">Проектирование и UX</span><p>Информационная архитектура, User Flow, CJM, JTBD, сложные формы и таблицы, дашборды, UX-райтинг</p></div>
+        <div class="block"><span class="mono">UI и дизайн-системы</span><p>Дизайн-системы на Figma Variables (Light / Dark), токены → CSS, библиотеки компонентов, Variants, Auto Layout, прототипы, адаптив и PWA, print-дизайн</p></div>
+        <div class="block"><span class="mono">Исследования и аналитика</span><p>Юзабилити-тесты, интервью, конкурентный анализ, анализ рынка, продуктовые метрики</p></div>
+        <div class="block"><span class="mono">Инструменты</span><p>Figma, FigJam, Photoshop, GitHub, HTML/CSS, AI-инструменты в исследовании, дизайне и коде</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CV -->
+<section id="cv">
+  <div class="sec">
+    <div class="label"><span class="n">04</span><span class="mono">Опыт</span></div>
+    <div class="body">
+      <div class="cv">
+        <div><span class="mono">2024 — 2026</span><span><b>Product Designer / Product Manager</b> · IT-компания, B2B SaaS (Москва, удалённо). Платформа инспекций и IoT-диспетчеризации: web, PWA, мобильное приложение.</span></div>
+        <div><span class="mono">2026 — н.в.</span><span><b>Автор продукта</b> · ежедневник-система «Не спусти жизнь в унитаз» и Telegram-бот.</span></div>
+        <div><span class="mono">2021 — 2024</span><span><b>UI/UX-дизайнер</b> · фриланс. Интерфейсы для частных заказчиков.</span></div>
+        <div><span class="mono">2020 — 2021</span><span><b>Координатор образовательных программ</b> · EdTech-проект «Искусственный интеллект». Онбординг в GetCourse, цепочки SendPulse и AmoCRM.</span></div>
+        <div><span class="mono">2012 — 2023</span><span><b>Начальник отдела мониторинга и тестирования</b> · ПНИПУ. Спроектировала и внедрила систему независимой оценки знаний, аналитика результатов, регламенты, команда отдела.</span></div>
+        <div><span class="mono">Обучение</span><span>Uprock — UI/UX и нейросети (2026) · Яндекс Практикум — дизайнер интерфейсов (2024) · ПНИПУ, высшее (2010)</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="box">
+    <span class="f-label">Открыта к предложениям · Product Designer, B2B</span>
+    <div class="contacts f-contacts">
+      <span>+7 952 644-39-24 · Telegram</span>
+      <span>a.s.pstu@gmail.com</span>
+      <button class="copy" type="button" id="copyMail2" data-copy="a.s.pstu@gmail.com">Скопировать e-mail</button>
+    </div>
+  </div>
+</footer>
+</div>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var t=btn.getAttribute('data-copy'), old=btn.textContent;
+    function done(){btn.textContent='Скопировано';setTimeout(function(){btn.textContent=old},1600)}
+    try{navigator.clipboard.writeText(t).then(done,function(){sel()})}catch(e){sel()}
+    function sel(){var r=document.createRange();var el=btn.previousElementSibling;r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Выделено, нажмите Ctrl+C'}
+  });
+});
+</script>
+
+</body>
+</html>
