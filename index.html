@@ -1,382 +1,295 @@
 <!doctype html>
 <html lang="ru">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Анастасия Путина — Product Designer. Web, iOS, Android: IoT-диспетчерская DomoSense и ежедневник «Протокол» с мобильным приложением.">
-<meta property="og:title" content="Анастасия Путина — Product Designer">
-<meta property="og:description" content="Два проекта: DomoSense — веб и мобильное приложение для 8 ролей, «Протокол» — ежедневник с приложением для ребёнка и родителя.">
-<meta property="og:image" content="https://aspstu-png.github.io/img/ds_hero.jpg">
-<meta property="og:url" content="https://aspstu-png.github.io/">
-<meta name="color-scheme" content="light dark">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232338C9'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='15' fill='white' text-anchor='middle'%3EАП%3C/text%3E%3C/svg%3E">
-<title>Анастасия Путина — Product Designer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<title>Анастасия Путина — портфолио</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="description" content="Анастасия Путина — Product Designer: веб и мобильные интерфейсы, дизайн-системы, моушн.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Unbounded:wght@600;700&display=swap">
 <style>
-/* Layout: a design specification sheet — narrow left rail of mono labels, wide right column of content; cases read like annotated drawings */
-:root{
-  --paper:#F4F5F3; --sheet:#FFFFFF; --ink:#16181D; --muted:#5B606B; --rule:#DADDE0;
-  --blue:#2338C9; --blue-soft:#E8EBFA; --gold:#B8913F;
-  --f-display:"Onest",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --f-body:"Onest",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
-  --s1:clamp(2.4rem,5.2vw,4.4rem); --s2:clamp(1.6rem,3vw,2.3rem); --s3:1.25rem; --s4:1.02rem; --s5:.78rem;
-}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --paper:#111318; --sheet:#181B21; --ink:#ECEDEF; --muted:#9EA3AD; --rule:#2B2F37;
-  --blue:#8E9CFF; --blue-soft:#1F2547; --gold:#D3B06A; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --paper:#111318; --sheet:#181B21; --ink:#ECEDEF; --muted:#9EA3AD; --rule:#2B2F37;
-  --blue:#8E9CFF; --blue-soft:#1F2547; --gold:#D3B06A; color-scheme:dark}
+  /* Layout: same system as the PDF portfolio — narrow label column + wide content column, blue section numbers */
+  :root {
+    --bg: #ffffff; --fg: #16181d; --muted: #555a63; --line: #e3e4e8; --soft: #f4f5f8;
+    --accent: #2338c9; --accent-soft: #eef0fc; --warm: #b8862e;
+    --display: "Unbounded", "Arial Black", sans-serif; --text: "Inter", "Segoe UI", system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --bg: #121318; --fg: #eceef3; --muted: #a2a7b3; --line: #2a2d36; --soft: #1b1d24;
+    --accent: #8a98ff; --accent-soft: #1f2340; --warm: #d9a441; color-scheme: dark } }
+  :root[data-theme="dark"] {
+    --bg: #121318; --fg: #eceef3; --muted: #a2a7b3; --line: #2a2d36; --soft: #1b1d24;
+    --accent: #8a98ff; --accent-soft: #1f2340; --warm: #d9a441; color-scheme: dark }
 
-*{box-sizing:border-box}
-body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:var(--s4);line-height:1.6;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;letter-spacing:-.02em}
-h1{font-size:var(--s1);font-weight:800;line-height:1.02}
-h2{font-size:var(--s2);font-weight:800;line-height:1.1}
-h3{font-size:var(--s3);font-weight:600;line-height:1.3}
-p{margin:0;max-width:66ch}
-.mono{font-family:var(--f-mono);font-size:var(--s5);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-.muted{color:var(--muted)}
-a{color:var(--blue)}
-:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+  html { -webkit-text-size-adjust: 100%; } *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 400 16px/1.6 var(--text); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding-block: 56px 72px;
+          padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  a { color: var(--accent); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  .cap { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  h1, h2 { text-wrap: balance; letter-spacing: -.01em; }
 
-/* top */
-header.top{padding-block:28px 0}
-.top-row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline;border-bottom:1px solid var(--rule);padding-block:0 14px}
-.top-row nav{display:flex;gap:18px;flex-wrap:wrap}
-.top-row nav a{color:var(--ink);text-decoration:none;font-family:var(--f-mono);font-size:var(--s5);letter-spacing:.06em;text-transform:uppercase}
-.top-row nav a:hover{color:var(--blue)}
+  /* hero */
+  header.hero { display: grid; gap: 28px; padding-bottom: 40px; border-bottom: 1px solid var(--line); }
+  .hero h1 { font: 700 clamp(34px, 6vw, 60px)/1.04 var(--display); margin: 10px 0 0; }
+  .hero .lead { font-size: 19px; max-width: 64ch; margin: 0; }
+  .contacts { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; font-size: 15px; }
+  .contacts span.sel { user-select: all; }
+  .copy { font: inherit; font-size: 13px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); border-radius: 8px; padding: 4px 10px; cursor: pointer; }
+  nav.toc { display: flex; flex-wrap: wrap; gap: 8px; }
+  nav.toc a { text-decoration: none; font-size: 14px; border: 1px solid var(--line); border-radius: 20px; padding: 6px 14px; color: var(--fg); }
+  nav.toc a:hover { border-color: var(--accent); color: var(--accent); }
 
-.hero{display:grid;grid-template-columns:200px 1fr;gap:32px;padding-block:56px 48px}
-.hero .lead{display:grid;gap:22px;min-width:0}
-.hero h1 em{font-style:normal;color:var(--blue)}
-.hero p.big{font-size:1.18rem;color:var(--muted)}
-.contacts{display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--f-mono);font-size:.86rem}
-.contacts span{user-select:all}
-.copy{font:inherit;font-family:var(--f-mono);font-size:.74rem;border:1px solid var(--rule);background:var(--sheet);color:var(--ink);border-radius:4px;padding:3px 8px;cursor:pointer}
-.copy:hover{border-color:var(--blue);color:var(--blue)}
+  /* sections */
+  section.proj { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 32px; padding-block: 56px; border-bottom: 1px solid var(--line); }
+  .num { font: 700 44px/1 var(--display); color: var(--accent); }
+  .side .cap { margin-top: 10px; display: block; }
+  .body { min-width: 0; display: grid; gap: 22px; }
+  .body h2 { font: 700 clamp(24px, 3.2vw, 34px)/1.15 var(--text); margin: 0; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tags span { font-size: 12px; color: var(--muted); border: 1px solid var(--line); border-radius: 6px; padding: 3px 8px; }
+  .body p { margin: 0; max-width: 68ch; }
+  .note { font-size: 14px; color: var(--muted); font-style: italic; }
+  .metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-block: 1px solid var(--line); padding-block: 16px 12px; gap: 12px; }
+  .metrics b { display: block; font: 700 26px/1.1 var(--text); font-variant-numeric: tabular-nums; }
+  .metrics span { font-size: 12px; color: var(--muted); line-height: 1.35; display: block; margin-top: 4px; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .links a { text-decoration: none; font-size: 14px; font-weight: 500; border: 1px solid var(--line); border-radius: 8px; padding: 7px 12px; }
+  .links a:hover { border-color: var(--accent); background: var(--accent-soft); }
+  .links a.main { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+  figure { margin: 0; }
+  figure img { display: block; width: 100%; height: auto; border-radius: 8px; background: var(--soft); }
+  figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; line-height: 1.45; }
+  .group-title { margin-top: 10px; }
+  .grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .phones { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+  .phones.six { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .phones img { background: none; border-radius: 0; }
+  .decisions { display: grid; gap: 10px; padding: 0; margin: 0; list-style: none; }
+  .decisions li { padding-left: 18px; position: relative; max-width: 72ch; }
+  .decisions li::before { content: ""; position: absolute; left: 0; top: .7em; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+  .evo { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .evo div { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; font-size: 14px; }
+  .evo div.now { border-color: var(--warm); }
+  .evo b { display: block; margin: 2px 0 4px; }
 
-.spec{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--rule)}
-.spec div{padding:18px 16px 18px 0;display:grid;gap:4px}
-.spec div+div{padding-left:16px;border-left:1px solid var(--rule)}
-.spec b{font-family:var(--f-display);font-size:2rem;font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+  /* experience */
+  table.cv { width: 100%; border-collapse: collapse; }
+  table.cv td { border-top: 1px solid var(--line); padding: 14px 0; vertical-align: top; }
+  table.cv td:first-child { width: 150px; padding-right: 16px; }
+  footer.end { margin-top: 48px; border: 1px solid var(--fg); border-radius: 12px; padding: 24px 28px; display: grid; gap: 10px; }
+  footer.end .t { font-weight: 600; }
 
-section{padding-block:72px 0}
-.sec{display:grid;grid-template-columns:200px 1fr;gap:32px}
-.sec > .label{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;display:grid;gap:6px}
-.sec > .label .n{font-family:var(--f-display);font-weight:800;font-size:2.6rem;line-height:1;color:var(--blue)}
-.body{display:grid;gap:28px;min-width:0}
-.meta{display:flex;flex-wrap:wrap;gap:6px}
-.tag{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.04em;border:1px solid var(--rule);border-radius:3px;padding:2px 7px;color:var(--muted);background:var(--sheet)}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.two > *{min-width:0}
-.block{display:grid;gap:10px}
-.block ul{margin:0;padding-left:1.1em;display:grid;gap:6px}
-.block li::marker{color:var(--blue)}
-
-figure{margin:0;display:grid;gap:8px}
-figure img{display:block;width:100%;height:auto;border:1px solid var(--rule);border-radius:6px;background:var(--sheet)}
-figcaption{font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
-
-/* flow */
-.flow{display:flex;flex-wrap:wrap;gap:0;align-items:stretch;border:1px solid var(--rule);border-radius:6px;background:var(--sheet);overflow:hidden}
-.flow div{flex:1 1 150px;padding:14px 16px;display:grid;gap:4px;position:relative}
-.flow div+div{border-left:1px dashed var(--rule)}
-.flow div+div::before{content:"→";position:absolute;left:-.55em;top:12px;background:var(--sheet);color:var(--blue);font-weight:600;padding:0 2px}
-.flow b{font-family:var(--f-display);font-size:1rem}
-.flow small{color:var(--muted);font-size:.84rem;line-height:1.4}
-
-/* decisions table */
-.tbl{overflow-x:auto;border:1px solid var(--rule);border-radius:6px;background:var(--sheet)}
-table{border-collapse:collapse;width:100%;min-width:620px;font-size:.93rem}
-th,td{text-align:left;vertical-align:top;padding:11px 14px;border-bottom:1px solid var(--rule)}
-th{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
-tr:last-child td{border-bottom:0}
-td:last-child{color:var(--blue);font-family:var(--f-mono);font-size:.84rem}
-
-code{font-family:var(--f-mono);font-size:.86em;background:var(--blue-soft);padding:1px 5px;border-radius:4px}
-.note{border-left:2px solid var(--gold);padding:4px 0 4px 14px;color:var(--muted);font-size:.92rem}
-
-/* planner */
-.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;align-items:start}
-.gallery figure:first-child{grid-row:span 2}
-.gallery figure:first-child img{aspect-ratio:874/1240}
-.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--rule)}
-.nums div{padding:14px 14px 0 0;display:grid;gap:2px}
-.nums b{font-family:var(--f-display);font-size:1.6rem;font-weight:800;font-variant-numeric:tabular-nums}
-.ladder{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;align-items:end}
-.ladder div{background:var(--blue-soft);border-radius:4px;padding:12px;display:grid;gap:2px}
-.ladder div:nth-child(1){min-height:70px}.ladder div:nth-child(2){min-height:100px}.ladder div:nth-child(3){min-height:130px}.ladder div:nth-child(4){min-height:160px;background:var(--blue);color:var(--sheet)}
-.ladder div:nth-child(4) .mono{color:var(--sheet);opacity:.8}
-.ladder b{font-family:var(--f-display);font-size:1.05rem}
-
-/* process */
-.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--rule)}
-.steps li{padding:16px 16px 16px 0;display:grid;gap:4px;border-bottom:1px solid var(--rule)}
-.steps li span{font-family:var(--f-mono);font-size:.74rem;color:var(--blue)}
-
-.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:20px 28px}
-.cv{display:grid;gap:0;border-top:1px solid var(--rule)}
-.cv div{display:grid;grid-template-columns:170px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule)}
-.cv div > *{min-width:0}
-
-footer{padding-block:80px 48px}
-footer .box{background:var(--ink);color:var(--paper);border-radius:8px;padding:32px;display:grid;gap:16px}
-footer .box h2{color:var(--paper)}
-footer .box .contacts span{color:var(--paper)}
-.f-label{font-family:var(--f-body);font-size:1.05rem;font-weight:600;letter-spacing:0;color:var(--paper)}
-.f-contacts{font-family:var(--f-body);font-size:1.3rem;font-weight:500;gap:8px 32px}
-footer .box .copy{background:transparent;color:var(--paper);border-color:color-mix(in srgb,var(--paper) 35%,transparent)}
-
-@media (max-width:860px){
-  .hero,.sec{grid-template-columns:1fr;gap:16px}
-  .sec > .label{position:static;display:flex;gap:12px;align-items:baseline}
-  .sec > .label .n{font-size:2rem}
-  .two,.skills{grid-template-columns:1fr}
-  .spec,.nums{grid-template-columns:repeat(2,1fr)}
-  .spec div:nth-child(3){padding-left:0;border-left:0}
-  .steps{grid-template-columns:1fr}
-  .gallery{grid-template-columns:1fr}
-  .gallery figure:first-child{grid-row:auto}
-  .ladder{grid-template-columns:repeat(2,1fr)}
-  .cv div{grid-template-columns:1fr;gap:2px}
-  .hero .side{display:none}
-}
-@media print{
-  :root{--paper:#fff;--sheet:#fff;--ink:#16181D;--muted:#555A63;--rule:#D6D9DD;--blue:#2338C9;--blue-soft:#E8EBFA;--f-mono:"Onest",system-ui,sans-serif;color-scheme:light}
-  .top-row nav,.copy{display:none}
-  section{padding-block:28px 0;break-inside:auto}
-  .sec > .label{position:static}
-  figure,.flow,.tbl,.ladder,.nums,.steps li,.cv div{break-inside:avoid}
-  .mono,.tag,figcaption,th,.steps li span,td:last-child{letter-spacing:.02em}
-  footer .box{background:#fff;color:#16181D;border:2px solid #16181D}
-  .f-label{color:#16181D}
-  footer .box .contacts span{color:#16181D}
-  .pb{break-before:page}
-  .two,.block{break-inside:avoid}
-  h2,h3{break-after:avoid}
-  footer{padding-block:28px 0}
-  .hero{padding-block:28px 24px}
-}
-@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
-.grp{break-inside:avoid;page-break-inside:avoid}
-.grp>.block{margin-bottom:12px}
-@media print{#cv{break-before:page;page-break-before:always}}
+  @media (max-width: 860px) {
+    section.proj { grid-template-columns: 1fr; gap: 16px; padding-block: 40px; }
+    .side { display: flex; align-items: baseline; gap: 14px; }
+    .side .cap { margin: 0; }
+    .num { font-size: 34px; }
+    .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .phones, .phones.six { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid2, .evo { grid-template-columns: 1fr; }
+    table.cv td:first-child { width: 110px; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
 </style>
-
-<style>body{margin:0}img{max-width:100%}</style>
 </head>
 <body>
-
 <div class="wrap">
-<header class="top">
-  <div class="top-row">
-    <span class="mono">Портфолио · 2026</span>
-    <nav aria-label="Разделы">
-      <a href="#domosense">DomoSense</a>
-      <a href="#planner">Протокол</a>
-      <a href="#cv">Опыт</a>
-    </nav>
-  </div>
-</header>
-
-<div class="hero">
-  <div class="side mono">Product Designer<br>Web · iOS · Android</div>
-  <div class="lead">
-    <span class="mono">Анастасия Путина · Product Designer</span>
-    <p class="big">Два проекта: B2B-диспетчерская для управляющих компаний и собственный продукт — ежедневник с мобильным приложением. До дизайна — 10 лет аналитики, поэтому решения принимаю по данным.</p>
+  <header class="hero">
+    <div>
+      <div class="cap">Портфолио · 2026 · Product Designer · Web · iOS · Android</div>
+      <h1>Анастасия Путина</h1>
+    </div>
+    <p class="lead">Проектирую сложные интерфейсы для веба и мобильных приложений: B2B-диспетчерская для управляющих компаний и собственный продукт — ежедневник с мобильным приложением. До дизайна — 10 лет аналитики, поэтому решения принимаю по данным.</p>
     <div class="contacts">
-      <span id="phone">+7 952 644-39-24 · Telegram</span>
-      <span id="mail">a.s.pstu@gmail.com</span>
-      <button class="copy" type="button" id="copyMail" data-copy="a.s.pstu@gmail.com">Скопировать e-mail</button>
-      <span class="muted">Пермь · удалённо · готова к переезду</span>
+      <span>Telegram и телефон: <span class="sel" id="phone">+7 952 644-39-24</span></span>
+      <span>Почта: <span class="sel" id="mail">a.s.pstu@gmail.com</span></span>
+      <button class="copy" id="copyMail" type="button">Скопировать почту</button>
+      <span class="cap" style="letter-spacing:.04em">Пермь · удалённо · готова к переезду</span>
     </div>
-  </div>
-</div>
+    <nav class="toc" aria-label="Разделы">
+      <a href="#domosense">DomoSense</a><a href="#motion">Моушн</a><a href="#moy-hod">«Мой ход»</a><a href="#ecom">E-com концепт</a><a href="#experience">Опыт</a><a href="putina-portfolio.pdf" download>Скачать PDF</a>
+    </nav>
+  </header>
 
-</div>
-
-<!-- CASE 1 -->
-<section id="domosense">
-  <div class="sec">
-    <div class="label"><span class="n">01</span><span class="mono">B2B SaaS · IoT</span></div>
+  <!-- 01 DomoSense -->
+  <section class="proj" id="domosense">
+    <div class="side"><div class="num">01</div><span class="cap">B2B SaaS · IoT</span></div>
     <div class="body">
-      <div class="block">
-        <h2>DomoSense — диспетчерская для управляющих компаний</h2>
-        <div class="meta"><span class="tag">Web 1440</span><span class="tag">iOS</span><span class="tag">Android</span><span class="tag">Дизайн-система</span></div>
-      </div>
-      <p>Лифты, вентиляция, вода и пожарная сигнализация в одном окне. В рабочем проекте я спроектировала веб-кабинет диспетчера с нуля, в 2026 году развила его в единую систему: веб для пульта и мобильное приложение для 7 ролей — от администратора УК до подрядчика с доступом на 3 часа.</p>
+      <h2>DomoSense — диспетчерская для управляющих компаний</h2>
+      <div class="tags"><span>Web 1440</span><span>iOS</span><span>Android</span><span>Дизайн-система</span></div>
+      <p>Лифты, вентиляция, вода и пожарная сигнализация в одном окне. В рабочем проекте я спроектировала веб-кабинет диспетчера с нуля, а в 2026 году развила его в единую систему: веб для пульта и мобильное приложение для 7 ролей — от администратора УК до подрядчика с доступом на 3 часа.</p>
       <p class="note">NDA: названия и данные вымышлены. Мобильная часть — концепт, тестов с пользователями не было.</p>
-      <div class="nums" role="list">
-        <div role="listitem"><b>51</b><span class="mono">веб-экран</span></div>
-        <div role="listitem"><b>100+</b><span class="mono">экранов iOS + 12 Android</span></div>
-        <div role="listitem"><b>8 × 28</b><span class="mono">ролей × действий в матрице прав</span></div>
-        <div role="listitem"><b>151</b><span class="mono">токен Light / Dark / платформы</span></div>
+      <div class="metrics">
+        <div><b>51</b><span>веб-экран</span></div>
+        <div><b>100+</b><span>экранов iOS и 12 Android</span></div>
+        <div><b>8 × 28</b><span>ролей × действий в матрице прав</span></div>
+        <div><b>151</b><span>токен Light / Dark / платформы</span></div>
+      </div>
+      <div class="links">
+        <a class="main" href="https://www.figma.com/design/Fu0UCqypHBHms3d8VFoQ4t" target="_blank" rel="noopener">Web + Mobile в Figma ↗</a>
+        <a href="https://www.figma.com/proto/TgHwlPhPxqGkT3HYAqHu3c/DomoSense?node-id=15-4&p=f&scaling=min-zoom&content-scaling=fixed&page-id=14%3A164&starting-point-node-id=15%3A4" target="_blank" rel="noopener">Прототип веба ↗</a>
+        <a href="https://github.com/aspstu-png/domosense-design-system" target="_blank" rel="noopener">Репозиторий GitHub ↗</a>
+        <a href="https://github.com/aspstu-png/domosense-design-system/pull/1" target="_blank" rel="noopener">Pull request · AI-разбор ↗</a>
       </div>
 
-      <div class="grp"><div class="block"><span class="mono">Web · пульт диспетчера</span></div>
-      <figure>
-        <img src="img/ds_dash.jpg" alt="Дашборд диспетчера: лента событий со статусами и девять карточек подсистем">
-        <figcaption>Дашборд: сначала то, что требует реакции, затем состояние систем</figcaption>
-      </figure></div>
-      <div class="two">
-        <figure><img src="img/ds_event.jpg" alt="Карточка события лифта: «Принять в работу», связь с кабиной, команды и AI-разбор"><figcaption>Событие: «Принять в работу», связь с кабиной, AI-разбор с основанием</figcaption></figure>
-        <figure><img src="img/ds_task.jpg" alt="Новая задача, поля которой заполнил AI"><figcaption>Задача из события: поля от AI подсвечены для проверки</figcaption></figure>
-      </div>
-      <div class="two">
-        <figure><img src="img/ds_taskcard.jpg" alt="Карточка задачи с этапами, чек-листом и таймером"><figcaption>Этапы задачи совпадают со статусами в приложении инженера</figcaption></figure>
-        <figure><img src="img/ds_dark.jpg" alt="Дашборд в тёмной теме"><figcaption>Тёмная тема — смена режима токенов</figcaption></figure>
+      <div class="cap group-title">Web · пульт диспетчера</div>
+      <figure><img src="img/ds_dash.jpg" alt="Дашборд диспетчера" loading="lazy"><figcaption>Дашборд: сначала то, что требует реакции, затем состояние систем</figcaption></figure>
+      <div class="grid2">
+        <figure><img src="img/ds_event.jpg" alt="Событие с AI-разбором" loading="lazy"><figcaption>Событие: «Принять в работу», связь с кабиной, AI-разбор с основанием</figcaption></figure>
+        <figure><img src="img/ds_task.jpg" alt="Задача из события" loading="lazy"><figcaption>Задача из события: поля от AI подсвечены для проверки</figcaption></figure>
+        <figure><img src="img/ds_taskcard.jpg" alt="Карточка задачи" loading="lazy"><figcaption>Этапы задачи совпадают со статусами в приложении инженера</figcaption></figure>
+        <figure><img src="img/ds_dark.jpg" alt="Тёмная тема" loading="lazy"><figcaption>Тёмная тема — смена режима токенов</figcaption></figure>
       </div>
 
-      <div class="grp"><div class="block"><span class="mono">Mobile · iOS и Android, 7 ролей</span></div>
-      <figure>
-        <img src="img/m3_hero.jpg" alt="Три телефона: доступ подрядчика с таймером, обзор диспетчера и начало смены инженера">
-        <figcaption>Одна система — разный интерфейс для каждой роли</figcaption>
-      </figure></div>
-      <figure>
-        <img src="img/ds_mob1.jpg" alt="Шесть экранов: обзор диспетчера, событие с командами, устройство, временный доступ, обзор администратора с запросом на подтверждение, выбор роли при приглашении">
-        <figcaption>Диспетчер и администратор: обзор → событие → устройство → временный доступ → «ждут подтверждения» → роль при приглашении</figcaption>
-      </figure>
-      <figure>
-        <img src="img/ds_mob2.jpg" alt="Четыре экрана: начало смены инженера, отметка на объекте по геозоне, отчёт с фото и подписью, доступ подрядчика с таймером">
-        <figcaption>Инженер и подрядчик: смена → на объекте по геозоне → акт с подписью → доступ, который истекает сам</figcaption>
-      </figure>
-      <figure>
-        <img src="img/m3_screens.jpg" alt="Критичная команда с Face ID, «второй ключ» руководителя, задача офлайн, пусконаладка, Android с отпечатком">
-        <figcaption>Критичные действия: причина + биометрия, «второй ключ», работа офлайн, Android на Material 3</figcaption>
-      </figure>
-      <div class="two">
-        <figure><img src="img/m3_dark.jpg" alt="Тёмная тема в мобайле и критичный пуш на экране блокировки"><figcaption>Тёмная тема и критичный пуш на экране блокировки</figcaption></figure>
-        <figure><img src="img/m3_confirm.jpg" alt="Таблица: какое подтверждение нужно для каждого критичного действия"><figcaption>Правила подтверждения — общий источник для дизайна, разработки и QA</figcaption></figure>
+      <div class="cap group-title">Mobile · iOS и Android, 7 ролей</div>
+      <figure><img src="img/m3_hero.jpg" alt="Мобильное приложение по ролям" loading="lazy"><figcaption>Одна система — разный интерфейс для каждой роли</figcaption></figure>
+      <figure><img src="img/ds_mob1.jpg" alt="Экраны диспетчера и администратора" loading="lazy"><figcaption>Диспетчер и администратор: обзор → событие → устройство → временный доступ → роль при приглашении</figcaption></figure>
+      <figure><img src="img/ds_mob2.jpg" alt="Экраны инженера и подрядчика" loading="lazy"><figcaption>Инженер и подрядчик: смена → на объекте по геозоне → акт с подписью → доступ, который истекает сам</figcaption></figure>
+      <figure><img src="img/m3_screens.jpg" alt="Критичные действия" loading="lazy"><figcaption>Критичные действия: причина и биометрия, «второй ключ», работа офлайн, Android на Material 3</figcaption></figure>
+      <div class="grid2">
+        <figure><img src="img/m3_dark.jpg" alt="Тёмная тема и пуш" loading="lazy"><figcaption>Тёмная тема и критичный пуш на экране блокировки</figcaption></figure>
+        <figure><img src="img/m3_confirm.jpg" alt="Правила подтверждения" loading="lazy"><figcaption>Правила подтверждения — общий источник для дизайна, разработки и QA</figcaption></figure>
       </div>
+      <div class="cap group-title">Системный поток · от сигнала до аналитики</div>
+      <figure><img src="img/ds_system.jpg" alt="Блок-схема системы" loading="lazy"><figcaption>30 шагов на 5 дорожках: устройство → платформа → веб → мобайл → внешние сервисы. Красный пунктир — исключения и эскалации</figcaption></figure>
 
-      <div class="grp"><div class="block"><span class="mono">Системный поток · от сигнала до аналитики</span></div>
-      <figure>
-        <img src="img/ds_system.jpg" alt="Блок-схема системного потока DomoSense: 30 шагов от сигнала датчика до метрик на пяти дорожках — устройство, платформа, веб-диспетчерская, мобильное приложение, внешние сервисы; ветки исключений отмечены красным пунктиром">
-        <figcaption>30 шагов на 5 дорожках: устройство → платформа → веб → мобайл → внешние сервисы. Красный пунктир — исключения и эскалации</figcaption>
-      </figure></div>
-
-      <div class="block">
-        <h3>Ключевые решения</h3>
-        <ul>
-          <li><b>Права по роли, а не по экрану.</b> Матрица 8 × 28: недоступное не появляется в навигации, заблокированное объясняет почему.</li>
-          <li><b>Сначала человек, потом техника.</b> При застрявшем лифте первый шаг — связь с кабиной, команды по одной.</li>
-          <li><b>Критичное — с причиной и биометрией.</b> Пожарная сигнализация — только со «вторым ключом» руководителя; пуш не выполняет действие.</li>
-          <li><b>Одна дизайн-система.</b> Аудит расхождений веба и мобайла, токены → CSS, 5 компонентов в коде на GitHub.</li>
-        </ul>
-        <p class="note">На собеседовании покажу проект целиком: все экраны веба и мобильного приложения, кликабельный прототип, дизайн-систему и код компонентов.</p>
-      </div>
+      <div class="cap group-title">Ключевые решения</div>
+      <ul class="decisions">
+        <li><b>Права по роли, а не по экрану.</b> Матрица 8 × 28: недоступное не появляется в навигации, заблокированное объясняет почему.</li>
+        <li><b>Сначала человек, потом техника.</b> При застрявшем лифте первый шаг — связь с кабиной, команды по одной.</li>
+        <li><b>Критичное — с причиной и биометрией.</b> Пожарная сигнализация — только со «вторым ключом» руководителя; пуш не выполняет действие.</li>
+        <li><b>Одна дизайн-система.</b> Аудит расхождений веба и мобайла, контраст по WCAG ≥ 4,5:1, токены → CSS, компоненты в коде на GitHub.</li>
+      </ul>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CASE 2 -->
-<section id="planner" class="pb">
-  <div class="sec">
-    <div class="label"><span class="n">02</span><span class="mono">Собственный продукт · B2C</span></div>
+  <!-- 02 Motion -->
+  <section class="proj" id="motion">
+    <div class="side"><div class="num">02</div><span class="cap">Анимация интерфейса</span></div>
     <div class="body">
-      <div class="block">
-        <h2>«Протокол» — ежедневник-система с мобильным приложением</h2>
-        <div class="meta"><span class="tag">iOS</span><span class="tag">Print</span><span class="tag">Product discovery</span><span class="tag">Behavior design</span><span class="tag">2026</span></div>
-      </div>
-      <p>Люди бросают планеры: форм много, а пропуск ощущается как провал. «Протокол» — том на 13 недель, где у каждой формы одна задача, а пропуск — данные, а не приговор. Детская версия Junior для 8–14 лет получила мобильное приложение: ребёнок записывает время и собирает звёзды, родитель видит прогресс и хвалит.</p>
-      <div class="nums" role="list">
-        <div role="listitem"><b>18</b><span class="mono">экранов приложения · MVP</span></div>
-        <div role="listitem"><b>2</b><span class="mono">роли: ребёнок и родитель</span></div>
-        <div role="listitem"><b>36</b><span class="mono">разворотов тома Junior</span></div>
-        <div role="listitem"><b>27</b><span class="mono">конкурентов в исследовании</span></div>
-      </div>
+      <h2>Микровзаимодействия: движение, которое объясняет, что произошло</h2>
+      <p>Два ролика в разном характере — сдержанный рабочий интерфейс и смелый beauty e-com. Анимация показывает смену статуса, уверенность подбора и подтверждает действие. Собраны кодом (HTML, CSS, Canvas) с покадровым рендером в видео.</p>
 
-      <div class="grp"><div class="block"><span class="mono">Mobile · приложение ребёнка</span></div>
-      <figure>
-        <img src="img/pl_app1.jpg" alt="Шесть экранов: приветствие с выбором роли, «Сегодня» с цепочкой дней и привычками, хронометраж, «Куда ушёл день» с кругом суток, «Неделя чемпиона», «Суперсилы»">
-        <figcaption>Старт → «Сегодня» → хронометраж в один тап → куда ушёл день → неделя чемпиона → суперсилы</figcaption>
-      </figure></div>
-      <figure>
-        <img src="img/pl_app2.jpg" alt="Четыре экрана: «Я сейчас» звёздами, «Кем я хочу стать», чек-ин чувств со светофором, копилка побед и грамоты">
-        <figcaption>Точка А звёздами, мечта → 3 суперсилы, чек-ин чувств, копилка побед</figcaption>
-      </figure>
-      <div class="grp"><div class="block"><span class="mono">Mobile · приложение родителя</span></div>
-      <figure>
-        <img src="img/pl_app3.jpg" alt="Пять экранов: подключение ребёнка по коду и QR, обзор недели с «чёрной дырой», договор о нормах экрана, похвала стикером, пейволл с 30 днями бесплатно">
-        <figcaption>Подключение по коду → обзор недели → договор о нормах экрана → похвала → подписка: 30 дней бесплатно для владельцев бумажного тома</figcaption>
-      </figure></div>
-      <figure>
-        <img src="img/pl_kit.jpg" alt="UI-кит приложения: цвета, 6 категорий времени, типографика, кнопки, чипы, звёзды, таб-бары ребёнка и родителя">
-        <figcaption>UI-кит продолжает бумагу: 6 цветов категорий как в томе, цели ребёнка ≥ 48 px, родитель — спокойнее и плотнее</figcaption>
-      </figure>
+      <div class="cap group-title">«Капля тона» — подбор оттенка тонального · концепт · 19 с</div>
+      <div class="grid2" style="grid-template-columns:repeat(4,minmax(0,1fr))">
+        <figure><img src="img/b_5.8.jpg" alt="Замеры тона" loading="lazy"><figcaption>Три замера вылетают каплями</figcaption></figure>
+        <figure><img src="img/b_11.4.jpg" alt="Совпадение 96%" loading="lazy"><figcaption>N230 · совпадение 96%</figcaption></figure>
+        <figure><img src="img/b_12.75.jpg" alt="Капля летит в корзину" loading="lazy"><figcaption>Капля летит в корзину</figcaption></figure>
+        <figure><img src="img/b_16.5.jpg" alt="Гипотеза" loading="lazy"><figcaption>Гарантия обмена и гипотеза</figcaption></figure>
+      </div>
+      <div class="links"><a class="main" href="https://drive.google.com/file/d/151Iy6NoeBRZ8E9LE-1uQfp0lb5b00b_o/view?usp=sharing" target="_blank" rel="noopener">Смотреть видео «Капля тона» ↗</a></div>
 
-      <div class="grp"><div class="block"><span class="mono">Print · бумажный том</span></div>
-      <figure>
-        <img src="img/pl_hero.jpg" alt="Обложка тома «Протокол» и разворот «Индекс системы» на 92 дня">
-        <figcaption>Том на квартал: индекс системы на 92 дня, две клетки закрашены заранее</figcaption>
-      </figure></div>
-      <div class="two">
-        <figure><img src="img/pl_time.jpg" alt="Разворот «Хронометраж»: линейка суток по 15 минут, план и факт"><figcaption>Хронометраж: план против факта</figcaption></figure>
-        <figure><img src="img/pl_skills.jpg" alt="Разворот «Кем мне стать, чтобы иметь»: цель и три навыка"><figcaption>Цель раскладывается на 3 навыка</figcaption></figure>
+      <div class="cap group-title">DomoSense — от тревоги до задачи · 15 с</div>
+      <div class="phones">
+        <figure><img src="img/d_1.6.png" alt="Новая тревога" loading="lazy"><figcaption>Новая тревога</figcaption></figure>
+        <figure><img src="img/d_6.6.png" alt="AI-разбор" loading="lazy"><figcaption>AI-разбор</figcaption></figure>
+        <figure><img src="img/d_10.5.png" alt="Поля от AI" loading="lazy"><figcaption>Поля от AI</figcaption></figure>
+        <figure><img src="img/d_12.6.png" alt="Задача назначена" loading="lazy"><figcaption>Задача назначена</figcaption></figure>
       </div>
-      <div class="two">
-        <figure><img src="img/pl_junior.jpg" alt="Обложка «Протокол Junior» и разворот «Как это работает»"><figcaption>Junior: обложка и пять шагов</figcaption></figure>
-        <figure><img src="img/pl_junior2.jpg" alt="Разворот «Мои суперсилы» со звёздами и тренировками"><figcaption>Суперсилы — тот же экран, что в приложении</figcaption></figure>
-      </div>
-
-      <div class="block">
-        <h3>Ключевые решения</h3>
-        <ul>
-          <li><b>Минимум — 2 минуты.</b> День засчитан, если записан один шаг; пропуск — одно слово причины, а не красный крест.</li>
-          <li><b>Бумага и приложение — одна система.</b> Те же формы и цвета; владелец тома получает 30 дней приложения бесплатно.</li>
-          <li><b>Хвалят за записи, а не за оценки.</b> Родитель видит прогресс и отправляет похвалу, чувства ребёнка видны только с его согласия.</li>
-          <li><b>Квартал вместо года.</b> Пик продаж — декабрь, а том на 13 недель можно начать в любой день.</li>
-        </ul>
-        <p class="note">На собеседовании покажу все экраны приложения, полные развороты обоих томов и исследование рынка.</p>
-      </div>
+      <div class="links"><a class="main" href="https://drive.google.com/file/d/1IJcC0fuvE3Z0inpKVFliQpGQfMRQsDfn/view?usp=sharing" target="_blank" rel="noopener">Смотреть видео DomoSense ↗</a></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CV -->
-<section id="cv">
-  <div class="sec">
-    <div class="label"><span class="n">03</span><span class="mono">Опыт</span></div>
+  <!-- 03 Мой ход -->
+  <section class="proj" id="moy-hod">
+    <div class="side"><div class="num">03</div><span class="cap">Собственный продукт · B2C</span></div>
     <div class="body">
-      <div class="cv">
-        <div><span class="mono">2024 — 2026</span><span><b>Product Designer / Product Manager</b> · IT-компания, B2B SaaS, удалённо. IoT-диспетчеризация и инспекции: web, PWA, мобильное приложение.</span></div>
-        <div><span class="mono">2026 — н.в.</span><span><b>Автор продукта</b> · ежедневник-система «Протокол», приложение Junior и Telegram-бот.</span></div>
-        <div><span class="mono">2021 — 2024</span><span><b>UI/UX-дизайнер</b> · фриланс.</span></div>
-        <div><span class="mono">2012 — 2023</span><span><b>Начальник отдела мониторинга и тестирования</b> · ПНИПУ. Система оценки знаний, аналитика, команда.</span></div>
-        <div><span class="mono">Навыки</span><span>IA, User Flow, JTBD, дашборды, сложные формы · дизайн-системы на Figma Variables, токены → CSS · iOS HIG, Material 3 · юзабилити-тесты, метрики · Figma, GitHub, HTML/CSS, AI-инструменты</span></div>
-        <div><span class="mono">Образование</span><span>ПНИПУ — высшее (2011)</span></div>
-        <div><span class="mono">Обучение</span><span>Uprock — UI/UX и нейросети (2026) · Яндекс Практикум — дизайнер интерфейсов (2024)</span></div>
+      <h2>«Мой ход» — ежедневник на полгода и детская версия Junior</h2>
+      <div class="tags"><span>Print</span><span>Заполняемый PDF</span><span>iOS</span><span>Product discovery</span><span>Behavior design</span><span>2026</span></div>
+      <p>Люди бросают планеры: год — слишком далеко, «цели» и баллы давят, а пропущенный день ощущается как провал. «Мой ход» — ежедневник на 26 недель: задачи вместо громких целей, честное описание вместо оценок, минимум — две минуты в день. Метод внутри — путь из точки А в точку Б. Продаётся как заполняемый PDF через Telegram-бот.</p>
+      <div class="metrics">
+        <div><b>26</b><span>недель · 182 дня</span></div>
+        <div><b>289</b><span>страниц A5 · заполняемый PDF</span></div>
+        <div><b>50</b><span>разворотов тома Junior</span></div>
+        <div><b>18</b><span>экранов приложения Junior · MVP</span></div>
       </div>
-    </div>
-  </div>
-</section>
+      <figure><img src="img/mh_start.jpg" alt="Старт ежедневника" loading="lazy"><figcaption>Обложка → как вести → точка А словами по 7 сферам → мои задачи и шаги под каждой</figcaption></figure>
+      <figure><img src="img/mh_path.jpg" alt="Путь" loading="lazy"><figcaption>Каким я вижу себя в точке Б → чему научиться по дороге → «если всё валится из рук» → середина пути</figcaption></figure>
+      <figure><img src="img/mh_rhythm.jpg" alt="Ритм" loading="lazy"><figcaption>Месяц → план недели → день на одной странице с «шагом дня» → итог недели словами, без оценок</figcaption></figure>
+      <div class="cap group-title">Как менялся продукт</div>
+      <div class="evo">
+        <div><span class="cap">v1</span><b>«Протокол»</b>13 недель, цели, баллы 1–10, замер каждый день</div>
+        <div><span class="cap">v2</span><b>«Точка Б»</b>Полгода, задачи и шаги, честно — словами, замер раз в 2 месяца</div>
+        <div class="now"><span class="cap">v3 · сейчас</span><b>«Мой ход»</b>Своё название, метод А → Б внутри, тест-драйв PDF, Junior на полгода</div>
+      </div>
 
-<footer>
-  <div class="box">
-    <span class="f-label">Открыта к предложениям · Product Designer, Web + Mobile</span>
-    <div class="contacts f-contacts">
-      <span>+7 952 644-39-24 · Telegram</span>
-      <span>a.s.pstu@gmail.com</span>
-      <button class="copy" type="button" id="copyMail2" data-copy="a.s.pstu@gmail.com">Скопировать e-mail</button>
+      <div class="cap group-title">«Мой ход Junior» · для 8–14 лет</div>
+      <p>Без страницы на каждый день: неделя — это план и дневник побед, шагов, проб и ошибок. Вместо оценок — личные рекорды и суперсилы, плюс свои деньги: три банки и копилка мечты.</p>
+      <figure><img src="img/jr_start.jpg" alt="Junior: старт" loading="lazy"><figcaption>Обложка и шесть шагов → мои суперсилы: мечта раскладывается на три навыка</figcaption></figure>
+      <div class="grid2">
+        <figure><img src="img/jr_week.jpg" alt="Junior: неделя и рекорд" loading="lazy"><figcaption>Неделя: план и дневник побед → «Мой рекорд» на 26 недель</figcaption></figure>
+        <figure><img src="img/jr_money.jpg" alt="Junior: деньги и финал" loading="lazy"><figcaption>Мои деньги и копилка мечты → грамота и «что изменилось»</figcaption></figure>
+      </div>
+      <figure><img src="img/pl_app1.jpg" alt="Приложение ребёнка" loading="lazy"><figcaption>Приложение ребёнка: «Сегодня» → хронометраж в один тап → неделя чемпиона → суперсилы. Экраны MVP сделаны до переименования продукта</figcaption></figure>
+      <div class="grid2">
+        <figure><img src="img/pl_app3.jpg" alt="Приложение родителя" loading="lazy"><figcaption>Приложение родителя: код → обзор недели → договор → похвала → подписка</figcaption></figure>
+        <figure><img src="img/pl_kit.jpg" alt="UI-кит" loading="lazy"><figcaption>UI-кит продолжает бумагу: 6 цветов категорий, цели ребёнка ≥ 48 px</figcaption></figure>
+      </div>
+      <div class="cap group-title">Ключевые решения</div>
+      <ul class="decisions">
+        <li><b>Полгода вместо года.</b> 26 недель видно целиком, начать можно в любой день.</li>
+        <li><b>Задачи, а не цели; без баллов и критики.</b> Точка А — описание словами, трудная неделя — подсказка, а не приговор.</li>
+        <li><b>Минимум — две минуты.</b> Одна строчка засчитывает день; пропустить день можно, два подряд — нет.</li>
+        <li><b>Хвалят за записи, а не за оценки.</b> В Junior родитель видит прогресс; чувства ребёнка видны только с его согласия.</li>
+      </ul>
     </div>
-  </div>
-</footer>
+  </section>
+
+  <!-- 04 E-com -->
+  <section class="proj" id="ecom">
+    <div class="side"><div class="num">04</div><span class="cap">Концепт · упражнение</span></div>
+    <div class="body">
+      <h2>Beauty e-com: от «не знаю, что мне подойдёт» до повторной покупки</h2>
+      <div class="tags"><span>iOS</span><span>E-commerce</span><span>JTBD</span><span>Гипотезы и метрики</span></div>
+      <p>Косметику нельзя вернуть, поэтому страх ошибиться — главный барьер. Сценарий, где уверенность «это подойдёт мне» появляется до кнопки «В корзину», а оформление занимает один экран. Бренд «Оттенок», товары и цены вымышлены; исследований не было — ниже гипотезы.</p>
+      <div class="phones six">
+        <figure><img src="img/s1.png" alt="Подбор ухода" loading="lazy"><figcaption>Подбор за 3 вопроса</figcaption></figure>
+        <figure><img src="img/s2.png" alt="Мой уход" loading="lazy"><figcaption>Рутина утро/вечер</figcaption></figure>
+        <figure><img src="img/s3.png" alt="Карточка" loading="lazy"><figcaption>«Подходит вашей коже»</figcaption></figure>
+        <figure><img src="img/s4.png" alt="Корзина" loading="lazy"><figcaption>Корзина и пробники</figcaption></figure>
+        <figure><img src="img/s5.png" alt="Оформление" loading="lazy"><figcaption>Оформление на одном экране</figcaption></figure>
+        <figure><img src="img/s6.png" alt="После заказа" loading="lazy"><figcaption>Напоминание о повторной покупке</figcaption></figure>
+      </div>
+      <ul class="decisions">
+        <li><b>Гипотеза:</b> если показывать «Подходит вашей коже» и отзывы людей с тем же типом кожи, вырастет конверсия из карточки в корзину. Проверка — A/B для тех, кто прошёл подбор.</li>
+        <li><b>Гипотеза:</b> если вместо «до бесплатной доставки 210 ₽» предлагать конкретный товар, меньше корзин будет брошено. Guardrail — отмены заказов.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Опыт -->
+  <section class="proj" id="experience">
+    <div class="side"><div class="num">05</div><span class="cap">Опыт</span></div>
+    <div class="body">
+      <table class="cv">
+        <tr><td class="cap">2024 — 2026</td><td><b>Product Designer / Product Manager</b> · IT-компания, B2B SaaS, удалённо. IoT-диспетчеризация и инспекции: web, PWA, мобильное приложение. Параллельно — ручное тестирование мобильного приложения компании.</td></tr>
+        <tr><td class="cap">2026 — н. в.</td><td><b>Автор продукта</b> · ежедневник «Мой ход» на полгода, детская версия Junior с приложением и Telegram-бот для продаж.</td></tr>
+        <tr><td class="cap">2021 — 2024</td><td><b>UI/UX-дизайнер</b> · фриланс.</td></tr>
+        <tr><td class="cap">2012 — 2023</td><td><b>Начальник отдела мониторинга и тестирования</b> · ПНИПУ. Система оценки знаний, аналитика, команда.</td></tr>
+        <tr><td class="cap">Навыки</td><td>IA, User Flow, JTBD, дашборды, сложные формы · дизайн-системы на Figma Variables, токены → CSS · iOS HIG, Material 3, WCAG · юзабилити-тесты, метрики · design QA и ручное тестирование мобильных приложений · анимация интерфейса · печать и заполняемые PDF · Figma, GitHub, HTML/CSS, AI-инструменты</td></tr>
+        <tr><td class="cap">Образование</td><td>ПНИПУ — высшее (2011)</td></tr>
+        <tr><td class="cap">Обучение</td><td>Uprock — UI/UX и нейросети (2026) · Яндекс Практикум — дизайнер интерфейсов (2024)</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <footer class="end">
+    <div class="t">Открыта к предложениям · Product Designer, Web + Mobile</div>
+    <div class="contacts"><span>+7 952 644-39-24 · Telegram</span><span>a.s.pstu@gmail.com</span></div>
+  </footer>
 </div>
 
 <script>
-document.querySelectorAll('.copy').forEach(function(btn){
-  btn.addEventListener('click',function(){
-    var t=btn.getAttribute('data-copy'), old=btn.textContent;
-    function done(){btn.textContent='Скопировано';setTimeout(function(){btn.textContent=old},1600)}
-    try{navigator.clipboard.writeText(t).then(done,function(){sel()})}catch(e){sel()}
-    function sel(){var r=document.createRange();var el=btn.previousElementSibling;r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Выделено, нажмите Ctrl+C'}
+  document.getElementById('copyMail').addEventListener('click', function () {
+    var btn = this, text = document.getElementById('mail').textContent;
+    var done = function () { btn.textContent = 'Скопировано'; setTimeout(function () { btn.textContent = 'Скопировать почту'; }, 1600); };
+    try {
+      navigator.clipboard.writeText(text).then(done, function () { select(); });
+    } catch (e) { select(); }
+    function select() {
+      var r = document.createRange(); r.selectNodeContents(document.getElementById('mail'));
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = 'Выделено — нажмите Ctrl+C';
+    }
   });
-});
 </script>
-
 </body>
 </html>
